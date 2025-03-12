@@ -7,13 +7,22 @@ package com.example.utils.lock;
  * 使用 Lua 脚本保证解锁的原子性。
  * create at 20250310
  */
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.params.SetParams;
 
+@Component
 public class RedisDistributedLock {
     private static final String LOCK_KEY = "distributed_lock";
     private static final String LOCK_VALUE = "locked";
     private static final int LOCK_EXPIRE_TIME = 30000; // 锁的超时时间（毫秒）
+
+    @Value("${spring.redis.host}")
+    private String host;
+
+    @Value("${spring.redis.port}")
+    private int port;
 
     private Jedis jedis;
 
