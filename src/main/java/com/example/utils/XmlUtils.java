@@ -1,6 +1,5 @@
 package com.example.utils;
 
-
-public class XmlUtils {
+public class  XmlUtils{
 
 }
