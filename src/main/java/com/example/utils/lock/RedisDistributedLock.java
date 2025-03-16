@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.params.SetParams;
 
-@Component
+//@Component
 public class RedisDistributedLock {
     private static final String LOCK_KEY = "distributed_lock";
     private static final String LOCK_VALUE = "locked";

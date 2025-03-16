@@ -52,12 +52,27 @@
         </dependency>
 
         <!--xml处理-->
+        <!-- Jackson 核心库 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.15.0</version>
+        </dependency>
+        <!-- Jackson XML 支持 -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
-            <version>2.15.3</version>
+            <version>2.15.0</version>
+        </dependency>
+        <!-- Jackson JSON 支持 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.0</version>
         </dependency>
         <!--xml处理-->
+
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
